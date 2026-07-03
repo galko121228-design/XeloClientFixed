@@ -22,8 +22,6 @@ add_subdirectory(xelo_init)
 add_subdirectory(XeloOverlay)
 
 # Подмодули XeloOverlay (только те, что реально существуют)
-add_subdirectory(XeloOverlay/src/counter)
-add_subdirectory(XeloOverlay/src/zoom)
 add_subdirectory(XeloOverlay/src/esp)
 
 # Временно отключаем, так как папка Build отсутствует
