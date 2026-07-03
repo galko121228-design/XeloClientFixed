@@ -8,11 +8,7 @@ if(ANDROID)
     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif()
 
-add_subdirectory(unpaircore)
-add_subdirectory(Preloader)
 add_subdirectory(xelo_init)
-add_subdirectory(XeloOverlay)
 add_subdirectory(xelo_motion_blur)
-
-# Только ESP (без counter, zoom, common)
+add_subdirectory(XeloOverlay)
 add_subdirectory(XeloOverlay/src/esp)
