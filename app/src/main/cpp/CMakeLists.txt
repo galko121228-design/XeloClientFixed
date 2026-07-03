@@ -8,23 +8,11 @@ if(ANDROID)
     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif()
 
-# Добавляем пути к заголовкам
-include_directories(
-    ${CMAKE_SOURCE_DIR}/Preloader/src
-    ${CMAKE_SOURCE_DIR}/XeloOverlay/src
-)
-
 add_subdirectory(unpaircore)
 add_subdirectory(Preloader)
 add_subdirectory(xelo_init)
-
-# Основной overlay
 add_subdirectory(XeloOverlay)
-
-# Подмодули XeloOverlay (только те, что реально существуют)
-add_subdirectory(XeloOverlay/src/esp)
-
-# Временно отключаем, так как папка Build отсутствует
-# add_subdirectory(libHttpClient/Build/libHttpClient.Android)
-
 add_subdirectory(xelo_motion_blur)
+
+# Только ESP (без counter, zoom, common)
+add_subdirectory(XeloOverlay/src/esp)
